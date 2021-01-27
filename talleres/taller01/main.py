@@ -29,15 +29,15 @@ class Punto2D():
 class Fecha():
 
     def __init__(self, dia, mes, anyo):
-        self.__dia = dia
-        self.__mes = mes
-        self.__anno = anyo
+        self.dia = dia
+        self.mes = mes
+        self.anno = anyo
 
     def get_dia(self):
-        return __dia
+        return dia
 
     def get_mes(self):
-        return __mes
+        return mes
 
     def get_anyo(self):
-        return __anyo
+        return anyo
