@@ -15,29 +15,20 @@ class Punto2D():
       return self.__y
 
     def radio_polar(self):
-        return math.sqrt(x**2 + y**2)
+        return math.sqrt(self.__x**2 + self.__y**2)
 
     def angulo_polar(self):
-        return math.atan(y/x)
+        return math.atan(self.__y/self.__x)
  
 
-    def dist_euclidiana(self, other):
-        x2 = other.x
-        y2 = other.y
-        return math.sqrt( pow((x2-x),2)+pow((y2-y),2));
+    def dist_euclidiana(self, x2, y2):
+        self.__x2 = x2
+        self.__y2 = y2
+        return math.sqrt( pow((self.__x2-self.__x),2)+pow((self.__y2-self.__y),2));
 
-class Fecha():
-
-    def __init__(self, dia, mes, anyo):
-        self.__dia = dia
-        self.__mes = mes
-        self.__anno = anyo
-
-    def get_dia(self):
-        return self.__dia
-
-    def get_mes(self):
-        return self.__mes
-
-    def get_anyo(self):
-        return self.__anyo
+Punto = Punto2D(10,20)
+print(Punto.get_x())
+print(Punto.get_y())
+print(Punto.radio_polar())
+print(Punto.angulo_polar())
+print(Punto.dist_euclidiana(0,0))
