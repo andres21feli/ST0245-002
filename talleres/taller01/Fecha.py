@@ -5,8 +5,21 @@ class Fecha():
     def __init__(self, dia, mes, anyo):
         self.__dia = dia
         self.__mes = mes
-        self.__anyo = anyo
-        self.__array_fecha = [str(self.__anyo),str(self.__mes),str(self.__dia)]
+        self.__anyo = str(anyo)
+
+        if self.__dia < 10:
+            self.__dia = str(self.__dia)
+            self.__dia = self.__dia.zfill(2)
+        else:
+            self.__dia = str(self.__dia)
+        
+        if self.__mes < 10:
+            self.__mes = str(self.__mes)
+            self.__mes = self.__mes.zfill(2)
+        else:
+          self.__mes = str(self.__mes)
+
+        self.__array_fecha = [self.__anyo,self.__mes,self.__dia]
 
     def get_dia(self):
         return self.__dia
@@ -24,8 +37,21 @@ class Fecha():
     def comparar(self, dia2, mes2, anyo2):
         self.__dia2 = dia2
         self.__mes2 = mes2
-        self.__anyo2 = anyo2
-        self.__array_fecha2 = [str(self.__anyo2),str(self.__mes2),str(self.__dia2)]
+        self.__anyo2 = str(anyo2)
+
+        if self.__dia2 < 10:
+            self.__dia2 = str(self.__dia2)
+            self.__dia2 = self.__dia2.zfill(2)
+        else:
+            self.__dia2 = str(self.__dia2)
+        
+        if self.__mes2 < 10:
+            self.__mes2 = str(self.__mes2)
+            self.__mes2 = self.__mes2.zfill(2)
+        else:
+          self.__mes2 = str(self.__mes2)
+
+        self.__array_fecha2 = [self.__anyo2,self.__mes2,self.__dia2]
         self.fecha_concatenada2 = int(''.join(self.__array_fecha2))
         if self.fecha_concatenada < self.fecha_concatenada2:
             return -1
@@ -36,7 +62,7 @@ class Fecha():
         elif self.fecha_concatenada > self.fecha_concatenada2:
             return 1
 
-Dia_hora_anyo = Fecha(21,1,2000)
+Dia_hora_anyo = Fecha(21,3,2000)
 print(Dia_hora_anyo.get_dia())
 print(Dia_hora_anyo.get_mes())
 print(Dia_hora_anyo.get_anyo())
