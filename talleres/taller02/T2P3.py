@@ -2,8 +2,8 @@
 """
 Created on %(date)s
 
-@author: %(Juan Camilo Gutierrez Urrego)s
-201710009014
+@author: %(Juan Camilo Gutierrez Urrego and Andres Felipe Agudelo Ortega)
+
 """
 from IPython import get_ipython;   
 get_ipython().magic('reset -sf')
